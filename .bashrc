@@ -107,6 +107,20 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 
+# Custom shell features below here ------
+
+nuke()
+{
+  if [ "${PWD##*/}" == "build" ]
+  then
+    cd ..
+  fi
+
+  rm -rf build
+  mkdir build
+  cd build
+}
+
 make()
 {
   pathpat="(/[^/]*)+:[0-9]+"
@@ -127,10 +141,10 @@ catkin_make()
   return ${PIPESTATUS[0]}
 }
 
-source /opt/ros/groovy/setup.bash
-source ~/catkin_ws/devel/setup.bash
+#source /opt/ros/groovy/setup.bash
+#source ~/catkin_ws/devel/setup.bash
 
-export ROS_MASTER_URI=http://192.168.1.97:11311
-export ROS_IP=`hostname -I | cut -f1 -d" "`
+#export ROS_MASTER_URI=http://192.168.1.97:11311
+#export ROS_IP=`hostname -I | cut -f1 -d" "`
 
 export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\]\w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\]\$\[\033[00m\] '
