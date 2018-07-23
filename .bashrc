@@ -147,6 +147,6 @@ catkin_make()
 #export ROS_MASTER_URI=http://192.168.1.97:11311
 #export ROS_IP=`hostname -I | cut -f1 -d" "`
 
-export PATH="/home/grey/tools/bin:$PATH"
+export PATH="/home/grey/.local/bin:$PATH"
 
 export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\]\w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\]\$\[\033[00m\] '
