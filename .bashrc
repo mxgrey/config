@@ -154,7 +154,7 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 
 __hg_ps1()
 {
-  hg prompt "({branch}{status})" 2> /dev/null
+  hg prompt "({branch}{ {status}})" 2> /dev/null
 }
 
 export PS1='\n\[\e[38;5;199m\][\t] \u@\h\[\e[1m\]\[\e[38;5;110m\]\w\[\e[m\] \[\e[38;5;227m\]$(__git_ps1 "(%s)")\[\e[38;5;120m\]$(__hg_ps1)\[\e[1;34m\]\[\e[m\]\n\[\e[38;5;199m\]└────────\$ ▶ \[\e[m\]'
