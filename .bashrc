@@ -158,3 +158,15 @@ __hg_ps1()
 }
 
 export PS1='\n\[\e[38;5;199m\][\t] \u@\h\[\e[1m\]\[\e[38;5;110m\]\w\[\e[m\] \[\e[38;5;227m\]$(__git_ps1 "(%s)")\[\e[38;5;120m\]$(__hg_ps1)\[\e[1;34m\]\[\e[m\]\n\[\e[38;5;199m\]└────────\$ ▶ \[\e[m\]'
+
+__find_ide_build_dir()
+{
+  if [[ $PWD == $HOME/projects/* ]]; then
+    tmp=${PWD##$HOME/projects/}
+    export IDE_BUILD_DIR=$HOME/projects/${tmp%%/*}/build/ide
+  else
+    export IDE_BUILD_DIR=$PWD/build/ide
+  fi
+}
+
+PROMPT_COMMAND='__find_ide_build_dir'
