@@ -1,0 +1,14 @@
+[ui]
+username = Michael X. Grey <grey@openrobotics.org>
+ignore = ~/.hgignore
+
+[merge-tools]
+meld.priority = 1
+meld.args = $local $base $other
+
+[merge-patterns]
+** = meld
+
+[extensions]
+prompt = ~/.hgext/prompt.py
+strip =

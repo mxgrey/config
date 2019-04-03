@@ -1,0 +1,5 @@
+[user]
+	email = grey@openrobotics.org
+	name = Michael X. Grey
+[core]
+	excludesfile = ~/.gitignore
