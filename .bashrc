@@ -121,6 +121,17 @@ nuke()
   cd build
 }
 
+md()
+{
+  mkdir -p $1
+}
+
+mdcd()
+{
+  mkdir -p $1
+  cd $1
+}
+
 make()
 {
   pathpat="(/[^/]*)+:[0-9]+"
