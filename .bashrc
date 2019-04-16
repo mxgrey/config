@@ -128,8 +128,13 @@ md()
 
 mdcd()
 {
-  mkdir -p $1
+  md $1
   cd $1
+}
+
+c()
+{
+  cat -n $@
 }
 
 make()
