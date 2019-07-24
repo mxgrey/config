@@ -147,19 +147,6 @@ make()
   return ${PIPESTATUS[0]}
 }
 
-catkin_make()
-{
-  pathpat="(/[^/]*)+:[0-9]+"
-  ccred=$(echo -e "\033[0;31m")
-  ccyellow=$(echo -e "\033[0;33m")
-  ccend=$(echo -e "\033[0m")
-  /opt/ros/groovy/bin/catkin_make "$@" 2>&1 | sed -E -e "/[Ee]rror[: ]/ s%$pathpat%$ccred&$ccend%g" -e "/[Ww]arning[: ]/ s%$pathpat%$ccyellow&$ccend%g"
-  return ${PIPESTATUS[0]}
-}
-
-#source /opt/ros/groovy/setup.bash
-#source ~/catkin_ws/devel/setup.bash
-
 #export ROS_MASTER_URI=http://192.168.1.97:11311
 #export ROS_IP=`hostname -I | cut -f1 -d" "`
 
