@@ -172,4 +172,6 @@ __find_ide_build_dir()
   fi
 }
 
+export ROS_DOMAIN_ID=5
+
 PROMPT_COMMAND='__find_ide_build_dir'
