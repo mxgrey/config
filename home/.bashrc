@@ -107,7 +107,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 
-# Custom shell features below here ------
+# ------ Custom shell features below here ------
 
 nuke()
 {
@@ -147,8 +147,7 @@ make()
   return ${PIPESTATUS[0]}
 }
 
-#export ROS_MASTER_URI=http://192.168.1.97:11311
-#export ROS_IP=`hostname -I | cut -f1 -d" "`
+export LS_COLORS=$LS_COLORS:'di=1;4;096:ln=1;106:tw=1;4;096;100:ow=1;4;096;100'
 
 export PATH="/home/grey/.local/bin:$PATH"
 
@@ -172,6 +171,6 @@ __find_ide_build_dir()
   fi
 }
 
-export ROS_DOMAIN_ID=5
+export ROS_DOMAIN_ID=55
 
 PROMPT_COMMAND='__find_ide_build_dir'
