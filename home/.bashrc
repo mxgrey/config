@@ -147,7 +147,7 @@ make()
   return ${PIPESTATUS[0]}
 }
 
-export LS_COLORS=$LS_COLORS:'di=1;4;096:ln=1;106:tw=1;4;096;100:ow=1;4;096;100'
+export LS_COLORS=$LS_COLORS:'di=1;96:ln=1;106:tw=1;96;100:ow=1;96;100:ex=1;92'
 
 export PATH="/home/grey/.local/bin:$PATH"
 
