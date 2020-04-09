@@ -174,3 +174,12 @@ __find_ide_build_dir()
 export ROS_DOMAIN_ID=55
 
 PROMPT_COMMAND='__find_ide_build_dir'
+
+dm()
+{
+  c++filt -t $1 | echo -e "\n\nDemangled symbol:\n\n$(</dev/stdin)"
+}
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
