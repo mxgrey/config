@@ -1,0 +1,7 @@
+**/target/debug/**
+**/target/release/**
+**/*.rs.bk
+**/target/CACHEDIR.TAG
+
+# Use this for libraries, but remove it for executables
+Cargo.lock
