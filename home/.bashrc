@@ -134,7 +134,7 @@ mdcd()
 
 c()
 {
-  cat -n $@
+  batcat $@
 }
 
 make()
@@ -179,6 +179,8 @@ dm()
 {
   c++filt -t $1 | echo -e "\n\nDemangled symbol:\n\n$(</dev/stdin)"
 }
+
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
