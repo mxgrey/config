@@ -1,5 +1,6 @@
 **/target/debug/**
 **/target/release/**
+**/target/
 **/*.rs.bk
 **/target/CACHEDIR.TAG
 
